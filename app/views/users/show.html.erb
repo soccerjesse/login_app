@@ -1,4 +1,4 @@
 <h1>Welcome!!</h1>
 
-<p>you are logged in as .</p>
-<%= link_to "ログアウト", root_path %>
+<p>you are logged in as <strong><%= current_user.email %></strong>.</p>
+<%= link_to "ログアウト", logout_path, method: :delete %>

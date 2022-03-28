@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :login_no,      only: :show
+  before_action :already_login, only: [:new, :create]
+
   def new  #登録ページ
     @user = User.new
   end
